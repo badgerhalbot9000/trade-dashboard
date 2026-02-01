@@ -19,6 +19,8 @@ import FintechCard11 from './fintech-card-11'
 import FintechCard12 from './fintech-card-12'
 import FintechCard13 from './fintech-card-13'
 import FintechCard14 from './fintech-card-14'
+import CryptoCard from '@/components/crypto-card'
+import WatchlistPanel from '@/components/watchlist-panel'
 
 export default function Fintech() {
   return (
@@ -59,6 +61,10 @@ export default function Fintech() {
         <FintechCard01 />
         {/* Credit Card */}
         <FintechCard02 />
+        {/* Live Crypto Prices */}
+        <CryptoCard />
+        {/* Watchlist */}
+        <WatchlistPanel />
         {/* Bar chart (Cash Flow) */}
         <FintechCard03 />
         {/* Horizontal bar chart (Cash Flow by Account) */}

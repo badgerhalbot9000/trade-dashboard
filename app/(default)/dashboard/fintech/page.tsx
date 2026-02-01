@@ -24,6 +24,7 @@ import WatchlistPanel from '@/components/watchlist-panel'
 import ExportMenu from '@/components/export-menu'
 import MarketTrendsCard from '@/components/market-trends-card'
 import TechnicalIndicatorsCard from '@/components/technical-indicators-card'
+import PortfolioSummaryCard from '@/components/portfolio-summary-card'
 
 export default function Fintech() {
   return (
@@ -63,6 +64,8 @@ export default function Fintech() {
 
         {/* Page Intro */}
         <FintechIntro />
+        {/* Portfolio Summary */}
+        <PortfolioSummaryCard />
         {/* Line chart (Portfolio Returns) */}
         <FintechCard01 />
         {/* Credit Card */}

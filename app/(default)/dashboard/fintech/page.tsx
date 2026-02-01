@@ -21,6 +21,8 @@ import FintechCard13 from './fintech-card-13'
 import FintechCard14 from './fintech-card-14'
 import CryptoCard from '@/components/crypto-card'
 import WatchlistPanel from '@/components/watchlist-panel'
+import ExportMenu from '@/components/export-menu'
+import MarketTrendsCard from '@/components/market-trends-card'
 
 export default function Fintech() {
   return (
@@ -39,6 +41,9 @@ export default function Fintech() {
 
           {/* Datepicker built with React Day Picker */}
           <Datepicker />
+
+          {/* Export menu */}
+          <ExportMenu filename="trade-dashboard" />
 
           {/* Add account button */}
           <button className="btn bg-gray-900 text-gray-100 hover:bg-gray-800 dark:bg-gray-100 dark:text-gray-800 dark:hover:bg-white">
@@ -84,8 +89,8 @@ export default function Fintech() {
         <FintechCard11 />
         <FintechCard12 />
         <FintechCard13 />
-        {/* Table (Market Trends) */}
-        <FintechCard14 />        
+        {/* Enhanced Market Trends Table (sortable, searchable) */}
+        <MarketTrendsCard />        
 
       </div>
     </div>

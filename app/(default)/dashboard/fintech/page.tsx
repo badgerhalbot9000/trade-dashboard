@@ -23,6 +23,7 @@ import CryptoCard from '@/components/crypto-card'
 import WatchlistPanel from '@/components/watchlist-panel'
 import ExportMenu from '@/components/export-menu'
 import MarketTrendsCard from '@/components/market-trends-card'
+import TechnicalIndicatorsCard from '@/components/technical-indicators-card'
 
 export default function Fintech() {
   return (
@@ -70,6 +71,8 @@ export default function Fintech() {
         <CryptoCard />
         {/* Watchlist */}
         <WatchlistPanel />
+        {/* Technical Indicators */}
+        <TechnicalIndicatorsCard />
         {/* Bar chart (Cash Flow) */}
         <FintechCard03 />
         {/* Horizontal bar chart (Cash Flow by Account) */}

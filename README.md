@@ -1,38 +1,104 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Trade Dashboard
+
+Real-time stock market trading dashboard built with Next.js 16, TypeScript, and Chart.js.
+
+## Features
+
+- 📊 Real-time stock data (via Alpaca API)
+- 📈 Portfolio tracking and analysis  
+- 💰 Cash flow and expense tracking
+- 📉 Market trends and technical indicators
+- 🎨 Beautiful, responsive UI with Tailwind CSS
+- 🌙 Dark mode support
+- 📱 Mobile-friendly
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (React 19)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS 4
+- **Charts:** Chart.js 4
+- **UI Components:** Headless UI, Radix UI
+- **Data Source:** Alpaca API (paper trading)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+ 
+- npm or pnpm
+
+### Installation
 
 ```bash
+# Clone the repo
+git clone https://github.com/badgerhalbot9000/trade-dashboard.git
+cd trade-dashboard
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the dashboard.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## API Setup
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+To connect live stock data, you'll need an Alpaca account:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Sign up at https://alpaca.markets/ (free paper trading)
+2. Get your API keys
+3. Create `.env.local`:
+   ```
+   ALPACA_API_KEY=your-key-here
+   ALPACA_API_SECRET=your-secret-here
+   ALPACA_PAPER=true
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+See [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) for detailed integration steps.
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+trade-dashboard/
+├── app/
+│   ├── (default)/
+│   │   └── dashboard/
+│   │       └── fintech/          # Main dashboard
+│   ├── api/                      # API routes (will add)
+│   ├── page.tsx
+│   └── layout.tsx
+├── components/                   # Reusable components
+├── lib/                          # Utilities & hooks
+├── public/                       # Static assets
+└── IMPLEMENTATION_PLAN.md        # Development roadmap
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Development Roadmap
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+See [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) for the complete implementation plan including:
 
-## Deploy on Vercel
+- Phase 1: Dependencies update ✅
+- Phase 2: API integration (Alpaca)
+- Phase 3: Real-time WebSocket updates
+- Phase 4: Portfolio & news integration
+- Phase 5: Dashboard enhancements
+- Phase 6: Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This is a private project. Contributors:
+- badgerhalbot9000 (owner)
+- badger3000 (admin)
+
+## License
+
+Private - All rights reserved
+
+## Status
+
+🚧 **In Development** - Setting up live data integration
+
+Last updated: 2026-02-01
